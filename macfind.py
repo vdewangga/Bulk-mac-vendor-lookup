@@ -5,7 +5,7 @@ import sys
 ar = sys.argv
 line = []
 v = {}
-file = open(str("contoh-mac.txt")).read().split()
+file = open(ar[1]).read().split()
 for m in range(len(file)):
 	j = json.load(urllib.request.urlopen('https://macvendors.co/api/'+file[m]))
 	v[file[m]] = j['result']['company']
